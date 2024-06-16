@@ -61,11 +61,18 @@ public class Program {
 //		Department newDepartment = departmentDao.findById(id);
 //		System.out.println(newDepartment);
 		
-//		System.out.println("\n===== Test 4: department insert =====");
+		System.out.println("\n===== Test 2: department findAll =====");
+		List<Department> listFindAll = departmentDao.findAll();
+		
+		for(Department obj: listFindAll) {
+				System.out.println(	obj.toString());
+		}
+		
+//		System.out.println("\n===== Test 3: department insert =====");
 //		Department newDepartment = new Department(null, "Sports");
 //		departmentDao.insert(newDepartment);
 
-//		System.out.println("\n===== Test 5: department update =====");
+//		System.out.println("\n===== Test 4: department update =====");
 //		System.out.print("Enter deparment update name: ");
 //		String name = sc.nextLine();
 //		System.out.println();
@@ -74,9 +81,9 @@ public class Program {
 //		departmentDao.update(newDepartment);
 //		System.out.println("Update Complete");
 		
-		System.out.println("\n===== Test 6: department delete =====");
-		departmentDao.deleteById(8);	
-		System.out.println("Delete Complete");
+//		System.out.println("\n===== Test 5: department delete =====");
+//		departmentDao.deleteById(8);	
+//		System.out.println("Delete Complete");
 		
 		
 	}
