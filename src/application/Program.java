@@ -3,6 +3,7 @@ package application;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
@@ -14,10 +15,12 @@ public class Program {
 	
 	public static void main(String[] args) {
 		
+		Scanner sc = new Scanner(System.in);
+		
 		SellerDao sellerDao = DaoFactory.createSellerDao();
 		DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
 		
-		Department department = new Department(2, null);
+//		Department department = new Department(2, null);
 		
 //		System.out.println("===== Test 1: seller findById =====");
 //		Seller seller = sellerDao.findById(3);
@@ -47,10 +50,33 @@ public class Program {
 //		System.out.println("\n===== Test 6: seller delete =====");
 //		sellerDao.deleteById(47);	
 //		System.out.println("Delete Complete");
+	
 		
-		System.out.println("\n===== Test 4: department insert =====");
-		Department newDepartment = new Department(null, "Sports");
-		departmentDao.insert(newDepartment);
+		//DEPARTMENT DAO
+		
+		
+//		System.out.println("===== Test 1: department findById =====");
+//		System.out.print("Enter deparment id: ");
+//		int id = sc.nextInt();
+//		Department newDepartment = departmentDao.findById(id);
+//		System.out.println(newDepartment);
+		
+//		System.out.println("\n===== Test 4: department insert =====");
+//		Department newDepartment = new Department(null, "Sports");
+//		departmentDao.insert(newDepartment);
+
+//		System.out.println("\n===== Test 5: department update =====");
+//		System.out.print("Enter deparment update name: ");
+//		String name = sc.nextLine();
+//		System.out.println();
+//		Department newDepartment = departmentDao.findById(4);
+//		newDepartment.setName(name);
+//		departmentDao.update(newDepartment);
+//		System.out.println("Update Complete");
+		
+		System.out.println("\n===== Test 6: department delete =====");
+		departmentDao.deleteById(8);	
+		System.out.println("Delete Complete");
 		
 		
 	}
